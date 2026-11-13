@@ -60,16 +60,17 @@ The domain was bought on Netlify. `netlify.toml` holds the settings: build comma
 
 The Netlify site is **samuelowoade** (https://samuelowoade.netlify.app) on the samuelowoade team, first deployed 13 November 2026. `samuelowoade.com` and `www.samuelowoade.com` point to it through Netlify DNS, and Netlify renews the HTTPS certificate itself.
 
-On a new computer, sign in and link this folder once:
+**Publishing:** the site is linked to the private GitHub repository [Sammich99/samuel-owoade-site](https://github.com/Sammich99/samuel-owoade-site). Every push to `main` makes Netlify build and publish it (each one is a production deploy on the samuelowoade team). Other branches don't deploy.
+
+```sh
+git push
+```
+
+To publish from this computer without pushing (for example to test something first), sign in and link the folder once, then deploy by hand:
 
 ```sh
 netlify login
 netlify link --name samuelowoade
-```
-
-To publish an update:
-
-```sh
 npm run build && netlify deploy --prod --dir dist --no-build
 ```
 
