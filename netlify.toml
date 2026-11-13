@@ -1,0 +1,27 @@
+# Netlify: builds the static site from src/ into dist/. No dependencies to install.
+# Unknown paths get dist/404.html automatically.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# The www address goes to the bare domain.
+[[redirects]]
+  from = "https://www.samuelowoade.com/*"
+  to = "https://samuelowoade.com/:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
