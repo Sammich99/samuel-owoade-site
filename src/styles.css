@@ -265,13 +265,6 @@ html:not(.js) .chapter-map, html.no-map .chapter-map { display: none; }
 .j-card .card.product { height: 100%; display: flex; flex-direction: column; gap: 8px; }
 .j-card .card.product .shot { flex: 1 1 auto; min-height: 56px; height: auto; }
 .j-link { position: absolute; width: 0; border-left: 1.5px dashed var(--faint); z-index: 1; }
-.region-label {
-  position: absolute; font-family: var(--font-mono); font-weight: 500; font-size: clamp(48px, 8vh, 96px); letter-spacing: .14em; text-transform: uppercase;
-  color: var(--fg); opacity: .055; white-space: nowrap; pointer-events: none; transform: translateY(-50%);
-}
-.border-line { position: absolute; width: 0; border-left: 1.5px dashed var(--faint); opacity: .8; }
-.border-line span { position: absolute; top: 0; left: 10px; font-family: var(--font-mono); font-size: 11px; color: var(--muted); white-space: nowrap; background: var(--bg); padding: 2px 6px; border-radius: 4px; }
-.j-globe { position: absolute; z-index: 2; }
 .j-next { position: absolute; transform: translate(-50%, -50%); display: grid; justify-items: center; gap: 8px; text-align: center; width: 280px; z-index: 2; padding: 14px; border-radius: 18px; background: color-mix(in srgb, var(--bg) 82%, transparent); }
 .j-next .pill { border-style: dashed; }
 .j-next p { font-size: 16px; letter-spacing: -0.015em; }
